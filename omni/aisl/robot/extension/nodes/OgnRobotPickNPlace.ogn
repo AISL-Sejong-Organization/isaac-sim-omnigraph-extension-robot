@@ -1,0 +1,78 @@
+{
+    "pick_n_place": {
+        "version": 1,
+        "description": "",
+        "language": "Python",
+        "metadata": {
+            "uiName": "Pick N Place"
+        },
+        "inputs": {
+            "robot_prim_path": {
+                "type": "string",
+                "description": "",
+                "metadata": {
+                    "uiName": "Robot Prim Path"
+                },
+                "default": ""
+            },
+            "current_target_object_dim": {
+                "type": "double[3][]",
+                "description": "",
+                "metadata": {
+                    "uiName": "Current Target Object Dimension"
+                },
+                "default": []
+            },
+            "current_target_object_pos": {
+                "type": "double[3][]",
+                "description": "",
+                "metadata": {
+                    "uiName": "Current Target Object Position"
+                },
+                "default": []
+            },
+            "current_target_object_ori": {
+                "type": "double[]",
+                "description": "",
+                "metadata": {
+                    "uiName": "Current Target Object Orientation"
+                },
+                "default": []
+            },
+            "object_target_pos": {
+                "type": "double[3][]",
+                "description": "",
+                "metadata": {
+                    "uiName": "Object Target Position"
+                },
+                "default": []
+            },
+            "object_target_ori": {
+                "type": "double[]",
+                "description": "",
+                "metadata": {
+                    "uiName": "Object Target Orientation"
+                },
+                "default": []
+            },
+            "execute": {
+                "type": "execution",
+                "description": "",
+                "default": 0,
+                "metadata": {
+                    "uiName": "Execute"
+                }
+            }
+        },
+        "outputs": {
+            "gripper_grasp_command": {
+                "type": "bool",
+                "description": "",
+                "default": false,
+                "metadata": {
+                    "uiName": "Gripper Grasp Command"
+                }
+            }
+        }
+    }
+}

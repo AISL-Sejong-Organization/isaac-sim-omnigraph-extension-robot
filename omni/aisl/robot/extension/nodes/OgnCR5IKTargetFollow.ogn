@@ -1,0 +1,52 @@
+{
+    "cr5_ik_follow_target": {
+        "version": 1,
+        "description": "",
+        "language": "Python",
+        "metadata": {
+            "uiName": "CR5 IK Follow Target"
+        },
+        "inputs": {
+            "robot_name": {
+                "type": "string",
+                "description": "",
+                "default": "",
+                "metadata": {
+                    "uiName": "Robot Name"
+                }
+            },
+            "robot_prim_path": {
+                "type": "string",
+                "description": "",
+                "default": "",
+                "metadata": {
+                    "uiName": "Robot Prim Path"
+                }
+            },
+            "end_effector_name": {
+                "type": "string",
+                "description": "",
+                "metadata": {
+                    "uiName": "End Effector Name"
+                },
+                "default": ""
+            },
+            "end_effector_prim_path": {
+                "type": "string",
+                "description": "",
+                "default": "",
+                "metadata": {
+                    "uiName": "End Effector Prim Path"
+                }
+            },
+            "execute": {
+                "type": "execution",
+                "description": "",
+                "default": 0,
+                "metadata": {
+                    "uiName": "Execute"
+                }
+            }
+        }
+    }
+}
