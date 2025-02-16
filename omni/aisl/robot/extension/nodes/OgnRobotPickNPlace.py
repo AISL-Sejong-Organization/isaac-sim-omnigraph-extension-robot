@@ -262,14 +262,14 @@ class OgnRobotPickNPlace:
                     print(traceback.format_exc())
 
                 # 목표 지점(물체 위) 근접 여부 확인하여 다음 상태로
-                ee_prim = XFormPrim(os.path.join(state.robot_prim_path,"_f85/robotiq_arg2f_base_link"))
+                ee_prim = XFormPrim(os.path.join(state.robot_prim_path,"robotiq_edited/Robotiq_2F_85/robotiq_2f_85_base_link"))
                 cur_ee_position, _ = ee_prim.get_world_pose()
                 distance_to_target_point = abs(
                     np.linalg.norm((cur_ee_position - cur_target_object_pos))
                     - np.linalg.norm(translation_from_source * SCALE_FACTOR)
                 )
                 print(f"  -> Distance to target point: {distance_to_target_point}")
-                if distance_to_target_point < 1e-2:
+                if distance_to_target_point < 0.02:
                     state.task = "ReachDown"
 
             elif state.task == "ReachDown":
@@ -326,7 +326,11 @@ class OgnRobotPickNPlace:
                     carb.log_warn("Failed to move above target cube.")
                     print(traceback.format_exc())
 
-                ee_prim = XFormPrim(os.path.join(state.robot_prim_path,"_f85/robotiq_arg2f_base_link"))
+                ee_prim = XFormPrim(
+                    os.path.join(
+                        state.robot_prim_path, "robotiq_edited/Robotiq_2F_85/robotiq_2f_85_base_link"
+                    )
+                )
                 cur_ee_position, _ = ee_prim.get_world_pose()
                 distance_to_target_point = abs(
                     np.linalg.norm((cur_ee_position - object_target_pos))
